@@ -1,4 +1,6 @@
 Insertion Sort:
+Overall Complexity: Quadratic O(n**2)
+--This is due to the nested for loops, each of which will iterate n times. 
 
 func insertionSort( var a as array )
     for i from 1 to N
@@ -7,7 +9,14 @@ func insertionSort( var a as array )
                 swap a[j] and a[j-1]
 end func
 
-Merge Sort:
+Merge Sort: 
+Overall Complexity: Linearithmic O(nLog(n))
+func mergeSort O(Log(n))
+functor merge O(n)
+--The first half (func mergeSort) divides the length of the lists by 2 until each
+array contains only 1 element. 
+--The second half (func merge) performs while loops that terminate only once a and b both contain 0 elements.  
+
 
 func mergeSort( var a as array )
      if ( n == 1 ) return a
@@ -41,6 +50,11 @@ func merge( var a as array, var b as array )
 end func
 
 Selection Sort:
+Overall Complexity: Quadratic O(n**2)
+This is due to the fact that comparing every element in an array will take n-1 steps.
+Assuming the worst case, that the target number (lowest) is always at the end of the
+array, swapping its position will take 1 step. Executing n-1 comparisons, with 1
+swap on every elements in the array will take n**2 steps.
 
 int i,j;
 
